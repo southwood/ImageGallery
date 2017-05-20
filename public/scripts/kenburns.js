@@ -1,7 +1,7 @@
 /* global $ */
 
 function kenburns (selector, imgs, interval, fadeIn, fadeOut) {
-  interval = interval || 1500
+  interval = interval || 15000
   fadeIn = fadeIn || 1200
   fadeOut = fadeOut || 500
 
