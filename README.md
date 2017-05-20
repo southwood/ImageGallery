@@ -2,6 +2,8 @@
 
 An image gallery with subtle kenburns effect, visual white noise overlay, and slightly shaking letters.
 
+https://southwood.github.io/ImageGallery/
+
 ## Development
 - install homebrew
   ```bash
@@ -18,4 +20,8 @@ An image gallery with subtle kenburns effect, visual white noise overlay, and sl
 - run the server
   ```bash
   http-server public
+  ```
+- deploy to github pages
+  ```bash
+  git subtree push --prefix public origin gh-pages
   ```
