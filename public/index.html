@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.1/csshake.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/kenburns.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Gallery</title>
+  </head>
+  <body>
+
+    <div class='container'>
+      <div id='whitenoise'></div>
+      <div class='text'>Suitcase Laundry X Swift</div>
+      <div class='image'>
+        <img class='background'/>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/grained.min.js"></script>
+    <script type="text/javascript" src="scripts/kenburns.js"></script>
+    <script type="text/javascript" src="scripts/lettershake.js"></script>
+    <script type="text/javascript" src="scripts/whitenoise.js"></script>
+    <script type="text/javascript">
+      $.getJSON('assets/images.json', function(images) {
+        Gallery.whiteNoise('#whitenoise')
+        Gallery.kenburns('.background', images)
+        Gallery.letterShake('.text')
+      })
+    </script>
+  </body>
+</html>
+
+
