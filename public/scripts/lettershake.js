@@ -11,7 +11,7 @@ function letterShake (selector) {
   var f = function () {
     text.html('')
     var shakingLetter = -1
-    if (Math.random() < 0.10) {
+    if (Math.random() < 0.03) {
       shakingLetter = Math.random() * letters.length
     }
 

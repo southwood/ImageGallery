@@ -10,10 +10,9 @@ function kenburns (selector, imgs, interval, fadeIn, fadeOut) {
   clone
     .hide()
     .on('load', function () {
-      if (this.width < 1920) {
-        clone.addClass('imagefix')
-      }
-
+      var ratio = this.width / this.height
+      clone.width($('.container').width() * 1.4)
+      clone.height(clone.width() / ratio)
       clone
         .appendTo('.image')
         .fadeIn(fadeIn, function () {
