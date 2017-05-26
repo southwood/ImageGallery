@@ -19,7 +19,7 @@ function kenburns (imgs, interval, fadeIn, fadeOut) {
         .addClass('image')
           .append($('<img/>'))))
 
-  interval = interval || 3000
+  interval = interval || 15000
   fadeIn = fadeIn || 1200
   fadeOut = fadeOut || 500
 
