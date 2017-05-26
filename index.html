@@ -10,11 +10,13 @@
   <body>
 
     <div class='container'>
-      <div id='whitenoise'></div>
-      <div class='text'>Suitcase Laundry X Swift</div>
-      <div class='image'>
-        <img class='background'/>
-      </div>
+      <div id='whitenoise' class='fill'></div>
+    </div>
+    <div class='container'>
+      <div class='text fill'>Suitcase Laundry X Swift</div>
+    </div>
+    <div class='container'>
+      <div class='kenburns'></div>
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,7 +27,7 @@
     <script type="text/javascript">
       $.getJSON('assets/images.json', function(images) {
         Gallery.whiteNoise('#whitenoise')
-        Gallery.kenburns('.background', images)
+        Gallery.kenburns(images)
         Gallery.letterShake('.text')
       })
     </script>

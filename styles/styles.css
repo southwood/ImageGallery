@@ -5,28 +5,24 @@
   top:0; 
   bottom:0;
   background-color: #666;
+  text-align: center;
 }
-#whitenoise {
-  position: relative;
+
+.fill {
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
 }
+
 .text {
-  position:absolute;
-  left:0; 
-  right:0;
-  top:0; 
-  bottom:0;
+  color:white;
+  padding-top: 50vh;
   text-align: center;
-  font-family: Futura;
   text-transform: uppercase;
+  font-family: Futura;
   font-size: 6.0vw;
   font-style: normal;
   font-variant: normal;
   font-weight: 500;
-  line-height: 26.4px;
-  padding-top: 30%;
-  color:white;
-  z-index: 2;
 }

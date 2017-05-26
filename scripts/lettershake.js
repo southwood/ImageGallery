@@ -3,9 +3,10 @@
 function letterShake (selector) {
   var updateInterval = 350
   var text = $(selector)
-  var letters = text
-    .text()
+  var message = getMessage(text)
+  var letters = message
     .replace(/ /g, '\xa0\xa0')
+    .replace(/%20/g, '\xa0\xa0')
     .split('')
 
   var f = function () {
@@ -32,6 +33,21 @@ function letterShake (selector) {
   }
 
   f()
+}
+
+function getMessage (text) {
+  var params = window.location.search.substring(1)
+  params = params.split('&')
+  var map = {}
+  for (var i = 0; i < params.length; i++) {
+    var param = params[i]
+    var parts = param.split('=')
+    if (parts && parts.length === 2) {
+      map[parts[0]] = parts[1]
+    }
+  }
+
+  return map['message'] || text.text()
 }
 
 window.Gallery = window.Gallery || {}
